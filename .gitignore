@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+instance/
+.env
+*.sqlite3
+db.sqlite3
+migrations/
+pipenv.lock
+*.db
+*.sqlite
