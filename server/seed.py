@@ -1,3 +1,6 @@
+"""
+Seed script to populate the database with initial sample data for restaurants, pizzas, and restaurant_pizzas.
+"""
 from server import create_app, db
 from server.models import Restaurant, Pizza, RestaurantPizza
 
