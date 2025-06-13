@@ -1,5 +1,9 @@
 from server import db
 
+"""
+Pizza model: represents a pizza entity with name, ingredients, and related restaurants.
+"""
+
 class Pizza(db.Model):
     __tablename__ = 'pizzas'
 

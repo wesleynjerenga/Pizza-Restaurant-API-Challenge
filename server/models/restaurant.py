@@ -1,5 +1,9 @@
 from server import db
 
+"""
+Restaurant model: represents a restaurant entity with name, address, and related pizzas.
+"""
+
 class Restaurant(db.Model):
     __tablename__ = 'restaurants'
 
@@ -8,9 +12,10 @@ class Restaurant(db.Model):
     address = db.Column(db.String, nullable=False)
 
     # Relationships
-    restaurant_pizzas = db.relationship('RestaurantPizza', back_populates='restaurant', cascade='all, delete-orphan')
+    restaurant_pizzas = db.relationship('RestaurantPizza', back_populates='restaurant', cascade='all, delete-orphan')  # Cascade delete
 
     def to_dict(self):
+        # Serialize restaurant without pizzas
         return {
             'id': self.id,
             'name': self.name,
@@ -18,6 +23,7 @@ class Restaurant(db.Model):
         }
 
     def to_dict_with_pizzas(self):
+        # Serialize restaurant with related pizzas
         return {
             'id': self.id,
             'name': self.name,

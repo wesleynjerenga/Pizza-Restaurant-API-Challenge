@@ -1,6 +1,10 @@
 from server import db
 from sqlalchemy.orm import validates
 
+"""
+RestaurantPizza model: join table for restaurants and pizzas, includes price validation.
+"""
+
 class RestaurantPizza(db.Model):
     __tablename__ = 'restaurant_pizzas'
 
