@@ -4,6 +4,10 @@ from server.models import RestaurantPizza, Pizza, Restaurant
 
 restaurant_pizza_bp = Blueprint('restaurant_pizzas', __name__)
 
+"""
+Controller for restaurant_pizza-related routes: POST with validation.
+"""
+
 @restaurant_pizza_bp.route('/restaurant_pizzas', methods=['POST'])
 def create_restaurant_pizza():
     data = request.get_json()
